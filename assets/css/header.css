@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.header .img {
+  display: flex;
+  gap: 1rem;
+  margin: 0px 0px 0px 10px;
+  align-items: center;
+}
+
+.header .img h1 {
+  font-family: "Bebas+Neue", sans-serif;
+  margin-left: -8px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.header .img img {
+  width: 5rem;
+  height: 4rem;
+}
+
+.header .list ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.header .list ul li {
+  display: flex;
+  margin-right: 2rem;
+  flex-direction: column;
+  font-size: 20px;
+  text-transform: capitalize;
+  gap: 0.8rem;
+  text-decoration: none;
+}
+
+.header .list ul li a {
+  text-decoration: none;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+  padding: 2px 6px;
+  border-radius: 10px;
+  color: black;
+}
+
+.header .list ul li a:hover {
+  transform: scale(1.1);
+  color: #ad9e9e;
+  transition: all 0.3s ease-in-out;
+}
+
+.header .box {
+  height: 40px;
+  display: flex;
+  cursor: pointer;
+  padding: 3px 15px;
+  background: #fff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+  align-items: center;
+  border-radius: 30px;
+}
+
+.header .box:hover input {
+  width: 200px;
+}
+
+.header .box input {
+  width: 0;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  transition: 0.7s;
+  background: transparent;
+  font-size: 18px;
+}
+
+.header .box a .fas {
+  color: black;
+  font-size: 18px;
+}

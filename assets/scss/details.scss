@@ -1,0 +1,88 @@
+// Heading
+#heading {
+    display: flex;
+    // justify-content: space-evenly;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+// Styling box
+#box {
+    padding: 2% !important;
+    margin-top: 0.5%;
+
+    // box containing habits
+    #habits {
+        max-height: 55vh;
+        overflow-y: auto;
+        // list items showing habits
+        li {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+// Styling week days container
+.week-days {
+    display: flex !important;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 1%;
+    width: 100%;
+    cursor: pointer;
+    // list days
+    li {
+        border: 2px solid lightgrey !important;
+        padding: 0.4rem;
+        border-radius: 5px;
+        font-weight: 600;
+        list-style: none;
+        // hover the week name
+        &:hover {
+            background-color: rgb(244, 185, 185);
+        }
+    }
+}
+// Streak of Particular habit in list 
+.habit-streak {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 2%;
+    margin-top: 1%;
+    gap: 10px;
+    margin-right: 2%;
+
+    h4 {
+        text-transform: capitalize;
+        margin: 0;
+    }
+    p {
+        margin: 10px;
+        padding: 0;
+        font-size: 17px;
+        font-weight: 500;
+    }
+}
+// Button span of creating 
+button {
+    span {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}
+
+@media(max-width:650px){
+    #heading{
+        h1{
+            font-size: 1rem;
+        }
+    }
+}

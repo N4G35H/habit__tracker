@@ -1,0 +1,110 @@
+<!-- CSS file of home part -->
+<link rel="stylesheet" href="/css/home.css">
+
+<!-- If the User is login then only show that part -->
+<%if(locals.user){%>
+    <!-- Container for Habits -->
+    <div class="container rounded bg-white shadow p-3" id="box">
+        <!-- Input to add habits -->
+        <div id="add-habit-form" class="rounded bg-blue shadow p-3 mb-5">
+            <form action="/create-habit" method="POST">
+                <div class="form-group">
+                    <label for="inputAddress">What habit you want to create?</label>
+                    <input type="text" class="form-control" id="inputAddress" name="habit" placeholder="Enter the habit"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress2">What do you want to Achieve?</label>
+                    <input type="text" class="form-control" id="inputAddress" name="description"
+                        placeholder="Enter your goal" required>
+                </div>
+                <div class="form-group">
+                    <label for="inputStart">Start Date(optional)</label>
+                    <input type="date" class="form-control" id="inputStart" name="start">
+                </div>
+                <div class="form-group">
+                    <label for="inputEnd">End Date(optional)</label>
+                    <input type="date" class="form-control" id="inputEnd" name="end">
+                </div>
+                <div class="form-group">
+                    <label for="inputEnd">Time</label>
+                    <input type="time" class="form-control" id="inputEnd" name="time" required>
+                </div>
+                <div class="form-group">
+                    <label for="inputState">Frequency</label>
+                    <select class="form-control form-select" name="frequency" id="inputState"
+                        aria-label="Default select example">
+                        <option selected>Daily</option>
+                        <option>Twice a Day</option>
+                        <option>Weekly</option>
+                    </select>
+                </div>
+                <div class="form-btn">
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i>Create Habit</button>
+
+                    <button type="button" class="btn btn-danger" id="cancel-habit"><i
+                            class="fa fa-times"></i>Cancel</button>
+                </div>
+            </form>
+        </div>
+        <div class="show-btn">
+
+            <button class="btn btn-success" id="btn-add-habit"><i class="fa fa-plus"></i>Add New Habit</button>
+            <a role="button" class="btn btn-primary" href="/details/details" id="btn-streak"><i
+                    class="fa fa-check"></i>Show
+                my
+                Streak</a>
+        </div>
+
+        <!-- list for habits -->
+        <div>
+            <ul class="list-group" id="habits">
+                <%for(let i of habit_list){%>
+                    <li class="list-group-item list-group-item-success habit">
+                        <div class="habit-info">
+                            <span id="habit-name">
+                                <h4>
+                                    <%=i.habit%>
+                                </h4>
+                            </span>
+                            <div class="strek">
+                                <form action="/details/update-habit/?id=<%=i._id%>&day=one&val=<%=i.days.one%>"
+                                    method="POST">
+                                    <button class="btn btn-change-status" type="submit">
+                                        <%=i.days.one%>
+                                    </button>
+                                </form>
+                                <a href="/delete-habit/?id=<%=i._id%>" class="btn btn-danger">
+                                    <i class="fa fa-times"></i>Delete
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row habit-streak">
+                            <%if(i.start!="" || i.end!="" ){%>
+                                <p>Starting on : <%=i.start%>
+                                </p>
+                                <p>Ending on : <%=i.end%>
+                                </p>
+                                <%}else{%>
+                                    <p>Building this forever</p>
+                                    <%}%>
+                                        <p>
+                                            <%=i.description%>
+                                        </p>
+                                        <p>Streak : <%=i.streak%>/7</p>
+                                        <p>
+                                            <%=i.time%>
+                                                <%=i.frequency%>
+                                        </p>
+                        </div>
+                    </li>
+                    <%}%>
+            </ul>
+        </div>
+    </div>
+    <%}else{%>
+        <!-- if the user not login then show that form  -->
+        <%-include('login')-%>
+            <%}%>
+                <!-- Js file for home.js -->
+                <script type="text/javascript" src="/js/home.js"></script>

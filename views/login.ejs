@@ -1,0 +1,24 @@
+<!-- CSS file of login part -->
+<link rel="stylesheet" href="/css/login.css">
+
+<div class="main">
+    <!-- Login part -->
+    <div class="login">
+        <div class="img">
+            <img src="/img/habit.png" alt="">
+            <h1>Habit Tracker</h1>
+        </div>
+        <p>To Continue,log into Habit Tracker</p>
+        <form id="login_form" action="/user/createsession" method="POST">
+            <label>Enter Your Email</label>
+            <input type="email" name="email" placeholder="Enter Email" autocomplete="on" required>
+            <label>Enter Your Password</label>
+            <input type="password" name="password" placeholder="Password" autocomplete="off" required>
+            <button class="login_btn" type="submit">Log In</button>
+        </form>
+        <h4>Don't Have Account</h4>
+        <div class="links">
+            <a href="/user/signup">Sign Up for Be Fit</a>
+        </div>
+    </div>
+</div>

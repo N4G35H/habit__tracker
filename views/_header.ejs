@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="/css/header.css">
+<div class="header">
+<!-- If the user is Sign In then only show that -->
+    <%if(locals.user){%>
+        <div class="img">
+            <img src="/img/habit.png" alt="">
+            <h1>Habit Tracker</h1>
+        </div>
+        <div class="list">
+            <ul>
+                <li>
+                    <a href="">
+                        <%=user.name%>
+                    </a>
+                </li>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/user/signOut">sign out</a>
+                </li>
+                <div class="box">
+                    <input type="search" placeholder="Search..." aria-label="Search" id="searchbar"
+                        onkeyup="search_habit()">
+                    <a href="#">
+                        <i class="fas fa fa-search"></i>
+                    </a>
+                </div>
+                <%}%>
+            </ul>
+        </div>
+</div>
+
+<script type="text/javascript" src="/js/layout.js"></script>

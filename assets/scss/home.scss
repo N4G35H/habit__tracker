@@ -1,0 +1,132 @@
+// Form to add habits
+#add-habit-form {
+    position: absolute;
+    top: 20%;
+    display: none;
+    left: 30%;
+    background-color: #d8dfe6;
+    z-index: 1;
+    width: 40%;
+    padding: 2%;
+}
+
+// styling of add habit and show streak button
+.show-btn{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 6rem;
+    margin-top: -6rem;
+    gap: 2rem;
+}
+
+// Styling box
+#box {
+    margin-top: 5rem;
+    padding: 3% !important;
+
+    // box containg habits
+    ul {
+        max-height: 60vh;
+        overflow-y: auto;
+    }
+}
+
+// List items showing in habits
+#habits li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+// info of particular habit
+.habit-info {
+    display: flex;
+    justify-content: space-between;
+
+    h4 {
+        text-transform: capitalize;
+        margin: 0;
+    }
+}
+
+// the streak for a particular habit in list
+.habit-streak {
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+
+    p {
+        margin: 0;
+    }
+}
+.checked {
+    text-decoration: line-through;
+}
+
+// Streak button
+#streak-container {
+    display: inline-block;
+}
+
+// Styling betwwen the streaks
+.strek {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 3%;
+    gap: 0.5em;
+}
+
+// giving the style in row container
+.row {
+    display: grid;
+    font-size: 18px;
+    font-weight: 500;
+    grid-template-columns: repeat(auto-fill, 161px);
+    grid-gap: 5rem;
+}
+
+// Styling the button
+button {
+    span {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}
+// form button
+.form-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+
+    i {
+        margin-right: 0.5rem;
+    }
+}
+
+// giving some space in i tags
+#btn-add-habit {
+    i {
+        margin-right: 0.5rem;
+    }
+}
+#btn-streak {
+    i {
+        margin-right: 0.5rem;
+    }
+}
+
+// Responsive Media Queries
+
+@media(max-width:700px){
+    #add-habit-form{
+        top: 30%;
+        left: 24%;
+        width: 52%;
+    }
+}

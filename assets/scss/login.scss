@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Roboto:wght@300&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+// main
+main{
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+// Styling the login 
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.4);
+    width: 40rem;
+    margin: auto;
+    height: 43rem;
+
+    .img {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+        align-items: center;
+        h1 {
+            font-family: "Bebas+Neue", sans-serif;
+            margin-left: -8px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        img {
+            width: 5rem;
+            height: 4rem;
+        }
+    }
+    p {
+        margin-top: 40px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    // Styling Login Form
+    #login_form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            font-size: 17px;
+            margin-bottom: 6px;
+        }
+        input {
+            width: 24rem;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid gray;
+            margin-bottom: 20px;
+
+            &::placeholder {
+                font-size: 15px;
+            }
+        }
+        a {
+            font-size: 18px;
+            color: black;
+        }
+        // Styling the Button of login
+        .login_btn {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            position: relative;
+            background-color: #1ed760;
+            color: #000000;
+            display: flex;
+            border-radius: 500px;
+            font-size: inherit;
+            min-block-size: 48px;
+            margin-bottom: 1rem;
+            border: none;
+            left: 17.2rem;
+            -webkit-box-align: center;
+            align-items: center;
+            font-weight: 700;
+            -webkit-box-pack: center;
+            justify-content: center;
+            padding-block: 8px;
+            padding-inline: 32px;
+            width: 30%;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+    .links {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        font-size: 20px;
+        color: gray;
+        width: 24rem;
+        justify-content: center;
+        gap: 1rem;
+        border: 1px solid gray;
+        border-radius: 20px;
+        font-weight: 600;
+        padding: 8px;
+
+        &:hover {
+            border-color: #000000;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 20px;
+            color: gray;
+        }
+    }
+    .login-link {
+        font-size: 18px;
+        margin-top: 0.5rem;
+        a {
+            &:hover {
+                color: red;
+            }
+        }
+    }
+    // Styling the Sign up button
+    .sign_btn {
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+        position: relative;
+        background-color: #1ed760;
+        color: #000000;
+        display: flex;
+        border-radius: 500px;
+        font-size: inherit;
+        min-block-size: 48px;
+        border: none;
+        left: 15.2rem;
+        -webkit-box-align: center;
+        align-items: center;
+        font-weight: 700;
+        -webkit-box-pack: center;
+        justify-content: center;
+        padding-block: 8px;
+        padding-inline: 32px;
+        width: 40%;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
